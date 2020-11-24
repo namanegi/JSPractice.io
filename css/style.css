@@ -12,6 +12,10 @@ header, nav, footer {
 	margin: auto;
     width: 54.5%;
 }
+
+html{
+    scroll-behavior: smooth;
+}
     
 /*header-------------------------------------------------*/
 
@@ -425,3 +429,27 @@ footer ul{
 nav ul li a:hover {
 	background-position: 0px -45px;
 }
+
+.back-to-top {
+    position: absolute;
+    top: 100vh - 5rem;
+    right: 4rem;
+    bottom: 5em;
+    width: 3em;
+    pointer-events: none;
+  }
+
+.back-to-top-link {
+    position: fixed;
+    pointer-events: all;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 25%;
+    width: 5rem;
+    height: 3rem;
+    background-color: #D6E3F0;
+    padding: 0.25rem;
+  }
