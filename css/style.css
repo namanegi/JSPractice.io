@@ -430,7 +430,7 @@ nav ul li a:hover {
 	background-position: 0px -45px;
 }
 
-.back-to-top {
+#back-to-top {
     position: absolute;
     top: 100vh - 5rem;
     right: 4rem;
@@ -439,7 +439,7 @@ nav ul li a:hover {
     pointer-events: none;
   }
 
-.back-to-top-link {
+#back-to-top-link {
     position: fixed;
     pointer-events: all;
     display: inline-block;
