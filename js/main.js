@@ -157,4 +157,49 @@ $(function() {
             $t_p = 4;
         }
     });
+
+    //script for question3
+    $('#slide3').click(function() {
+        $('#modal3').fadeIn();
+    });
+    $('.js-modal-close').on('click', function() {
+        $('.modal_win').fadeOut();
+        return false;
+    });
+
+    //script for question6
+    $cur_slide = 1;
+    $('#graphic img').hide();
+    $('#slide' + $cur_slide).show();
+    var Timer;
+    function startTimer() {
+        Timer = setInterval(function(){
+            $pre_slide = $cur_slide;
+            if ($cur_slide == 3) {
+                $cur_slide = 1;
+            } else {
+                $cur_slide++;
+            };
+            $('#slide' + $pre_slide).fadeOut();
+            $('#slide' + $cur_slide).fadeIn();
+        }, 5000);
+    }
+    startTimer();
+    $('#change1').click(function() {
+        $('#slide' + $cur_slide).fadeOut();
+        $('#slide1').fadeIn();
+        $cur_slide = 1;
+    });
+    $('#change2').click(function() {
+        $('#slide' + $cur_slide).fadeOut();
+        $('#slide2').fadeIn();
+        $cur_slide = 2;
+    });
+    $('#change3').click(function() {
+        $('#slide' + $cur_slide).fadeOut();
+        $('#slide3').fadeIn();
+        $cur_slide = 3;
+    });
+
+    //script for question8
 });
