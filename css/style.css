@@ -180,6 +180,19 @@ nav ul li {
     width: 180px;
     background: url(../images/navi.png) -780px 0px;
 }
+.megamenu {
+    background-color: navy;
+    position: absolute;
+    margin-left: 50vw;
+    width: 960px;
+    z-index: 5;
+}
+#nav_1_con {
+    display: none;
+}
+#nav_2_con {
+    display: none;
+}
 
 /*slide-------------------------------------------------*/
 
@@ -222,6 +235,7 @@ nav ul li {
 #list{
     list-style-image: url(../images/list_head.gif);
     margin: 10px 0px 0px 0px;
+    user-select:none;
 }
 #contents {
     float:none;
@@ -234,7 +248,6 @@ nav ul li {
     border: 3px solid navy;
     margin: 5px 0px 0px 10px;
     clear: both;
-    height:86px;
     width: 675px;
     border-radius: 5px 5px 0px 0px;
 }
@@ -242,7 +255,6 @@ nav ul li {
     border: 3px solid navy;
     margin: 5px 0px 0px 10px;
     clear: both;
-    height:65px;
     width: 675px;
     border-radius: 5px 5px 0px 0px;
 }
@@ -253,8 +265,9 @@ nav ul li {
     padding-left: 10px;
     height: 22px;
 }
-#list11, #list12, #list21, #list22{
+#list11, #list12, #list21, #list22, #list31, #list41{
     clear: both;
+    display: none;
 }
 #list li{
     float: left;
@@ -318,6 +331,10 @@ nav ul li {
     clear: both;
     color: black;
 }
+#tab2_con, #tab3_con, #tab4_con {
+    display: none;
+}
+
 /*sub------------------------------------------------*/
 
 #sub {
