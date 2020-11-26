@@ -8,9 +8,11 @@ $(function() {
     });
 
     // script for question8
+    $b = 0;
     $(document).ready(function() {
         $.getJSON("data/test.json", function(data) {
             var db = data;
+            $b = 1;
         });
     });
     for (var i in db) {
