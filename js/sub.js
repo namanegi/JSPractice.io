@@ -10,12 +10,10 @@ $(function() {
     // script for question8
     $(document).ready(function() {
         $.getJSON("data/test.json", function(data) {
-            for (var i in data) {
-                $('#data_output').append("<li>" + data[i].division + "</li>");
-                for (var j in data[i].person) {
-                    $('#data_output').append("<li>" + data[i].person[j].name + ": " + data[i].person[j].age + "才</li>");
-                };
-            };
+            $db = data;
         });
     });
+    for (var i in $db) {
+        $('#division').append('<option value="' + $db[i].division + '">' + $db[i].division + '</option>');
+    }
 });
