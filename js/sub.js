@@ -21,7 +21,7 @@ $(function() {
         $cur_div = $('#division').val();
         for (var i in $db) {
             if ($db[i].division == $cur_div) {
-                for (var j in $db[i]) {
+                for (var j in $db[i].person) {
                     $('#data_output').append("<li>" + $db[i].person[j].name + $db[i].person[j].age + "</li>");
                 }
             };
