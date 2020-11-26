@@ -13,9 +13,9 @@ $(function() {
         $.getJSON("data/test.json", function(data) {
             var db = data;
             $b = 1;
+            for (var i in db) {
+                $('#division').append('<option value="' + $db[i].division + '">' + $db[i].division + '</option>');
+            };
         });
     });
-    for (var i in db) {
-        $('#division').append('<option value="' + $db[i].division + '">' + $db[i].division + '</option>');
-    }
 });
