@@ -293,11 +293,13 @@ nav ul li {
     border-radius: 5px 5px 0px 0px;
 }
 #list1 h5, #list2 h5, #list3 h5, #list4 h5{
+    font-size: 1.1rem;
     margin: 0px;
     color: #fff;
     background-color: navy;
     padding-left: 10px;
-    height: 22px;
+    padding-top: 8px;
+    height: 32px;
 }
 #list11, #list12, #list21, #list22, #list31, #list41{
     clear: both;

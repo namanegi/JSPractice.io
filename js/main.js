@@ -48,13 +48,13 @@ $(function() {
     $s4 = 0;
     $('#acc_menu_1').click(function() {
         if ($s1 == 1) {
-            $('#list1').css('height', '20px');
+            $('#list1').css('height', '40px');
             $('#acc_menu_1').text('→個人のお客様');
             $('#list11').hide();
             $('#list12').hide();
             $s1 = 0;
         } else {
-            $('#list1').css('height', '86px');
+            $('#list1').css('height', '106px');
             $('#acc_menu_1').text('↓個人のお客様');
             $('#list11').show();
             $('#list12').show();
@@ -63,13 +63,13 @@ $(function() {
     });
     $('#acc_menu_2').click(function() {
         if ($s2 == 1) {
-            $('#list2').css('height', '20px');
+            $('#list2').css('height', '40px');
             $('#acc_menu_2').text('→法人のお客様');
             $('#list21').hide();
             $('#list22').hide();
             $s2 = 0;
         } else {
-            $('#list2').css('height', '86px');
+            $('#list2').css('height', '106px');
             $('#acc_menu_2').text('↓法人のお客様');
             $('#list21').show();
             $('#list22').show();
@@ -78,12 +78,12 @@ $(function() {
     });
     $('#acc_menu_3').click(function() {
         if ($s3 == 1) {
-            $('#list3').css('height', '20px');
+            $('#list3').css('height', '40px');
             $('#acc_menu_3').text('→株主・投資家の皆様');
             $('#list31').hide();
             $s3 = 0;
         } else {
-            $('#list3').css('height', '65px');
+            $('#list3').css('height', '85px');
             $('#acc_menu_3').text('↓株主・投資家の皆様');
             $('#list31').show();
             $s3 = 1;
@@ -91,12 +91,12 @@ $(function() {
     });
     $('#acc_menu_4').click(function() {
         if ($s4 == 1) {
-            $('#list4').css('height', '20px');
+            $('#list4').css('height', '40px');
             $('#acc_menu_4').text('→採用情報');
             $('#list41').hide();
             $s4 = 0;
         } else {
-            $('#list4').css('height', '65px');
+            $('#list4').css('height', '85px');
             $('#acc_menu_4').text('↓採用情報');
             $('#list41').show();
             $s4 = 1;

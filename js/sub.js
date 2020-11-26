@@ -6,6 +6,9 @@ $(function() {
         $('#line3').toggleClass('c_line3');
         $('#nav_menu').toggleClass('menu_in');
     });
+    $('#hamburger').hover(function() {
+        $('.inner_line').css('background-color', 'lightcoral');
+    });
 
     // script for question8
     $db = null;
