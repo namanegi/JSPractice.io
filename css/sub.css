@@ -1,0 +1,105 @@
+body {
+    background-color: lightcoral;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: navy;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    z-index: 1;
+}
+#nav_menu {
+    position: absolute;
+    top: 0;
+    background-color: oldlace;
+    height: 100vh;
+    width: 60%;
+    right: -60%;
+    transition: 0.5s;
+}
+#nav_menu ul {
+    padding-top: 100px;
+}
+#nav_menu ul li {
+    padding: 10px;
+    color: black;
+    display: block;
+}
+#hamburger {
+    display: block;
+    position: absolute;
+    transition: 1s;
+    border: 3px white;
+    border-style: inset;
+    right: 0vh;
+    height: 89px;
+    width: 90px;
+    transition: 1s;
+}
+#head_title {
+    text-align: center;
+    color: cornsilk;
+}
+.inner_line {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: cornsilk;
+    transition: 1s;
+}
+#line1 {
+    margin: 17px 20px 10px 20px;
+    top: 0;
+}
+#line2 {
+    margin: 10px 20px 10px 20px;
+    top: 32px;
+}
+#line3 {
+    margin: 10px 20px 10px 20px;
+    top: 57px;
+}
+.c_line1, .c_line2, .c_line3 {
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 5px;
+    background-color: black;
+}
+.c_line1 {
+    transform: translateX(-6px) translateY(24px) rotate(-50deg);
+    top: 0;
+}
+.c_line2 {
+    display: none;
+}
+.c_line3 {
+    transform: translateX(-6px) translateY(-24px) rotate(50deg);
+}
+.menu_in{
+    transform: translateX(-60%);
+}
+.em_box {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.content {
+    position: relative;
+    width: 80%;
+    height: 200px;
+    left: 10%;
+    border: 5px black solid;
+    border-radius: 5%;
+    margin: 10px 0px 10px 0px;
+}
+.content h1 {
+    background-color: cornflowerblue;
+    text-align: center;
+    width: 40%;
+    height: 50px;
+    margin: 75px 30% 75px 30%;
+}
