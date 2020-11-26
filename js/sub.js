@@ -10,10 +10,10 @@ $(function() {
     // script for question8
     $(document).ready(function() {
         $.getJSON("data/test.json", function(data) {
-            $db = data;
+            var db = data;
         });
     });
-    for (var i in $db) {
+    for (var i in db) {
         $('#division').append('<option value="' + $db[i].division + '">' + $db[i].division + '</option>');
     }
 });
