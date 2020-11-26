@@ -8,6 +8,8 @@ $(function() {
     });
     $('#hamburger').hover(function() {
         $('.inner_line').css('background-color', 'lightcoral');
+    }, function(){
+        $('.inner_line').css('background-color', 'cornsilk');
     });
 
     // script for question8
