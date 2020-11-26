@@ -103,3 +103,18 @@ header {
     height: 50px;
     margin: 75px 30% 75px 30%;
 }
+.content table {
+    width: 60%;
+    height: 150px;
+    background-color:  cornflowerblue;
+    border: 2px black solid;
+    margin: 25px 20% 25px 20%;
+}
+.content table th {
+    width: 100%;
+}
+.content table td {
+    width: 33.3%;
+    text-align: center;
+    border:2px black solid;
+}
