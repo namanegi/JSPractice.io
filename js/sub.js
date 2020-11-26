@@ -19,7 +19,7 @@ $(function() {
     });
     $('#ch_division').click(function() {
         $cur_div = $('#division').val();
-        $('#data_output').remove();
+        $('#data_output').empty();
         for (var i in $db) {
             if ($db[i].division == $cur_div) {
                 for (var j in $db[i].person) {
