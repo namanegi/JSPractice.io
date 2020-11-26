@@ -19,10 +19,11 @@ $(function() {
     });
     $('#ch_division').click(function() {
         $cur_div = $('#division').val();
+        $('#data_output').remove();
         for (var i in $db) {
             if ($db[i].division == $cur_div) {
                 for (var j in $db[i].person) {
-                    $('#data_output').append("<li>" + $db[i].person[j].name + $db[i].person[j].age + "</li>");
+                    $('#data_output').append("<li>" + $db[i].person[j].name + ": " + $db[i].person[j].age + "才</li>");
                 }
             };
         };
