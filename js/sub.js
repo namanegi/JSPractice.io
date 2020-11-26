@@ -8,14 +8,23 @@ $(function() {
     });
 
     // script for question8
-    $b = 0;
+    $db = null;
     $(document).ready(function() {
         $.getJSON("data/test.json", function(data) {
-            var db = data;
-            $b = 1;
-            for (var i in db) {
+            $db = data;
+            for (var i in $db) {
                 $('#division').append('<option value="' + $db[i].division + '">' + $db[i].division + '</option>');
             };
         });
+    });
+    $('#ch_division').click(function() {
+        $cur_div = $('#division').text();
+        for (var i in $db) {
+            if ($db[i].division == $cur_div) {
+                for (var j in $db[i]) {
+                    $('#data_output').append("<li>" + $db[i].person[j].name + $db[i].person[j].age + "</li>");
+                }
+            };
+        };
     });
 });
