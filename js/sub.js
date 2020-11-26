@@ -6,11 +6,13 @@ $(function() {
         $('#line3').toggleClass('c_line3');
         $('#nav_menu').toggleClass('menu_in');
     });
+    /*
     $('#hamburger').hover(function() {
         $('.inner_line').css('background-color', 'lightcoral');
     }, function(){
         $('.inner_line').css('background-color', 'cornsilk');
     });
+    */
 
     // script for question8
     $db = null;
