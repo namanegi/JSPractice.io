@@ -18,7 +18,7 @@ $(function() {
         });
     });
     $('#ch_division').click(function() {
-        $cur_div = $('#division').text();
+        $cur_div = $('#division').val();
         for (var i in $db) {
             if ($db[i].division == $cur_div) {
                 for (var j in $db[i]) {
