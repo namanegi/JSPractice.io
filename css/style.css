@@ -214,7 +214,7 @@ nav ul li {
 }
 .megacon ul li::marker {
     color: ivory;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 #nav_3_con {
     height: 120px;
