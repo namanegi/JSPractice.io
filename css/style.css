@@ -181,16 +181,43 @@ nav ul li {
     background: url(../images/navi.png) -780px 0px;
 }
 .megamenu {
-    background-color: navy;
+    background-color: rgba(38,45,123,1);
     position: absolute;
     width: 960px;
     z-index: 5;
-}
-#nav_1_con {
     display: none;
 }
-#nav_2_con {
-    display: none;
+.megacon {
+    position: relative;
+    float: left;
+    width: 350px;
+    height: 150px;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.megacon ul {
+    float: left;
+    left: 0;
+    width: 200px;
+    margin: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.megacon ul li {
+    text-align: left;
+    display: list-item;
+    color: ivory;
+    font-weight: bold;
+    margin: 5px 5px 5px 20px;
+    width: 100%;
+    height: 30px;
+}
+.megacon ul li::marker {
+    color: ivory;
+    font-size: 1.5rem;
+}
+#nav_3_con {
+    height: 120px;
 }
 
 /*slide-------------------------------------------------*/

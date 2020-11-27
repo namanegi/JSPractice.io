@@ -10,7 +10,7 @@ $(function() {
 
     // script for question5
     $posi_l = $('#nav_1').position().left;
-    $('.megamenu').css('margin-left', $posi_l - 10);
+    $('.megamenu').css('margin-left', $posi_l - 8);
     $('#nav_1').hover(function() {
         $('#nav_1_con').stop().slideDown();
         $('#nav_1').css('background', 'url(./images/navi.png) 0px 0px');
@@ -39,6 +39,36 @@ $(function() {
     }, function() {
         $('#nav_2_con').stop().hide();
         $('#nav_2').css('background', 'url(./images/navi.png) -180px -120px');
+    });
+
+    $('#nav_3').hover(function() {
+        $('#nav_3_con').stop().slideDown();
+        $('#nav_3').css('background', 'url(./images/navi.png) -360px 0px');
+    }, function() {
+        $('#nav_3_con').stop().hide();
+        $('#nav_3').css('background', 'url(./images/navi.png) -360px -120px');
+    });
+    $('#nav_3_con').hover(function() {
+        $('#nav_3_con').show();
+        $('#nav_3').css('background', 'url(./images/navi.png) -360px 0px');
+    }, function() {
+        $('#nav_3_con').stop().hide();
+        $('#nav_3').css('background', 'url(./images/navi.png) -360px -120px');
+    });
+
+    $('#nav_4').hover(function() {
+        $('#nav_4_con').stop().slideDown();
+        $('#nav_4').css('background', 'url(./images/navi.png) -600px 0px');
+    }, function() {
+        $('#nav_4_con').stop().hide();
+        $('#nav_4').css('background', 'url(./images/navi.png) -600px -120px');
+    });
+    $('#nav_4_con').hover(function() {
+        $('#nav_4_con').show();
+        $('#nav_4').css('background', 'url(./images/navi.png) -600px 0px');
+    }, function() {
+        $('#nav_4_con').stop().hide();
+        $('#nav_4').css('background', 'url(./images/navi.png) -600px -120px');
     });
 
     // script for question2
