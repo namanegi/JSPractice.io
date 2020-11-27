@@ -232,4 +232,20 @@ $(function() {
     });
 
     //script for question8
+    $info_data = null;
+    var img_class = {1: '<div><img src="images/category_07.png"></div>', 2: '<div><img src="images/category_08.png"></div>', 3: '<div><img src="images/category_09.png"></div>'};
+    $(document).ready(function() {
+        $.getJSON("data/test.json", function(data) {
+            $info_data = data;
+            for (var i in $info_data) {
+                $('#tab1_con').append(
+                    '<div id="' + $info_data[i].info_id + '">' + 
+                    '<div class="time">' + $info_data[i].time + '</div>' +
+                    img_class[$info_data[i].info_cls] + 
+                    '<div id="infotext">' + $info_data[i].infotext + '</div>' +
+                    '</div>'
+                    );
+            };
+        });
+    });
 });
