@@ -255,7 +255,7 @@ $(function() {
                         );
                 };
                 if ($info_data[i].info_cls == 'c2') {
-                    $('#tab2_con').append(
+                    $('#tab3_con').append(
                         '<div id="' + $info_data[i].info_id + '">' + 
                         '<div class="time">' + $info_data[i].time + '</div>' +
                         img_class[$info_data[i].info_cls] + 
@@ -264,7 +264,7 @@ $(function() {
                         );
                 };
                 if ($info_data[i].info_cls == 'c3') {
-                    $('#tab2_con').append(
+                    $('#tab4_con').append(
                         '<div id="' + $info_data[i].info_id + '">' + 
                         '<div class="time">' + $info_data[i].time + '</div>' +
                         img_class[$info_data[i].info_cls] + 
