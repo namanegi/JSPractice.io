@@ -235,7 +235,7 @@ $(function() {
     $info_data = null;
     var img_class = {c1: '<div><img src="images/category_07.png"></div>', c2: '<div><img src="images/category_08.png"></div>', c3: '<div><img src="images/category_09.png"></div>'};
     $(document).ready(function() {
-        $.getJSON("data/test.json", function(data) {
+        $.getJSON("data/info.json", function(data) {
             $info_data = data;
             for (var i in $info_data) {
                 $('#tab1_con').append(
