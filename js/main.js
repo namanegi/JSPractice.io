@@ -233,7 +233,7 @@ $(function() {
 
     //script for question8
     $info_data = null;
-    var img_class = {1: '<div><img src="images/category_07.png"></div>', 2: '<div><img src="images/category_08.png"></div>', 3: '<div><img src="images/category_09.png"></div>'};
+    var img_class = {c1: '<div><img src="images/category_07.png"></div>', c2: '<div><img src="images/category_08.png"></div>', c3: '<div><img src="images/category_09.png"></div>'};
     $(document).ready(function() {
         $.getJSON("data/test.json", function(data) {
             $info_data = data;
