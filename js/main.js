@@ -189,7 +189,7 @@ $(function() {
     });
 
     //script for question3
-    $('#slide3').click(function() {
+    $('#nav_5').click(function() {
         $('#modal3').fadeIn();
     });
     $('.js-modal-close').on('click', function() {
