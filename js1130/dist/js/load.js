@@ -22,7 +22,7 @@ $(function() {
             '<div class="text-center"></div></div></li>');
         };
     });
-    $('#query-division').focusout(function() {
+    $('#query-division').change(function() {
         if ($('#query-division').val() != "") {
             $('#loadarea').empty();
             for (var i in $db) {
