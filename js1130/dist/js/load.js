@@ -37,11 +37,16 @@ $(function() {
         };
     });
     function compareName(obj1, obj2) {
-        return (obj1.kastKana + obj1.firstKana) < (obj2.kastKana + obj2.firstKana);
+        if ((obj1.kastKana + obj1.firstKana) < (obj2.kastKana + obj2.firstKana)) {
+            return -1
+        };
+        if ((obj1.kastKana + obj1.firstKana) > (obj2.kastKana + obj2.firstKana)) {
+            return 1
+        };
+        return 0;
     }
     $('#sorting-name').click(function() {
         $('#loadarea').empty();
-        alert(compareName($db[0], $db[1]));
         $db.sort(compareName);
         for (var i in $db) {
             $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
