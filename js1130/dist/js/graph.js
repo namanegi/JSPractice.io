@@ -2,10 +2,23 @@ $db = null;
 $.getJSON("dist/js/include.json", function(data) {
     $db = data;
 });
+var males = 0;
+var females = 0;
+for (var i in $db) {
+    if ($db[i].gender == "男") {
+        males++
+    } else {
+        females++
+    }
+};
 
 var gender_data = {
     datasets: [{
-        data: [3, 7]
+        data: [males, females],
+        backgroundColor: [
+            'rgba(0, 0, 255, 1)',
+            'rgba(255, 0, 0, 1)'
+        ]
     }],
     labels: [
         'males',
