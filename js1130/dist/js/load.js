@@ -36,10 +36,10 @@ $(function() {
         };
     });
     function compareName(obj1, obj2) {
-        if ((obj1.kastKana + obj1.firstKana) < (obj2.kastKana + obj2.firstKana)) {
+        if ((obj1.lastKana + obj1.firstKana) < (obj2.lastKana + obj2.firstKana)) {
             return -1
         };
-        if ((obj1.kastKana + obj1.firstKana) > (obj2.kastKana + obj2.firstKana)) {
+        if ((obj1.lastKana + obj1.firstKana) > (obj2.lastKana + obj2.firstKana)) {
             return 1
         };
         return 0;
