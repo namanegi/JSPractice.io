@@ -1,6 +1,8 @@
 $db = null;
-$.getJSON("dist/js/include.json", function(data) {
-    $db = data;
+$(document).ready(function() {
+    $.getJSON("dist/js/include.json", function(data) {
+        $db = data;
+    });
 });
 var males = 0;
 var females = 0;
