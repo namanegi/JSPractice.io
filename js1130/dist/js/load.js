@@ -33,6 +33,7 @@ $(function() {
                     $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
                     '<div class="text-center"></div></div></li>');
                 };
+            };
         };
     });
 });
