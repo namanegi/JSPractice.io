@@ -57,9 +57,9 @@ $(function() {
             $(this).next().text("※正しく入力してください");
         };
     });
+    var err_text = '';
+    var chk_req = 1;
     $('input').focusout(function() {
-        var err_text = '';
-        var chk_req = 1;
         err_text = '';
         chk_req = 1;
         $('[class*="error"]').each(function(i, element) {
