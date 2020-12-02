@@ -24,6 +24,15 @@ $(function() {
                     '<div class="text-center"></div></div></li>');
                 };
             };
+        } else {
+            $('#loadarea').empty();
+            for (var i in $db) {
+                $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
+                $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
+                $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
+                $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
+                '<div class="text-center"></div></div></li>');
+            };
         };
     });
     function compareName(obj1, obj2) {
