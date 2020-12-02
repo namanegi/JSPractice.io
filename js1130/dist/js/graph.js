@@ -1,12 +1,9 @@
 $(document).ready(function() {
-    $db = null;
-    $.getJSON("dist/js/include.json", function(data) {
-        $db = data;
-    });
+    var db = getJSON("dist/js/include.json");
     var males = 0;
     var females = 0;
-    for (var i in $db) {
-        if ($db[i].gender == "男") {
+    for (var i in db) {
+        if (db[i].gender == "男") {
             males++
         } else {
             females++
