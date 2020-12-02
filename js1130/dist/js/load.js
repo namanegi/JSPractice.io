@@ -63,13 +63,7 @@ $(function() {
         return 0;
     };
     function compareNo(obj1, obj2) {
-        if ((obj1.number) < (obj2.number)) {
-            return -1
-        };
-        if ((obj1.number) > (obj2.number)) {
-            return 1
-        };
-        return 0;
+        return obj1.number - obj2.number;
     };
     $('#sorting-name').click(function() {
         $('#loadarea').empty();
