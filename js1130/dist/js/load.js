@@ -69,37 +69,45 @@ $(function() {
         $('#loadarea').empty();
         $db.sort(compareName);
         for (var i in $db) {
-            $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
-            $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
-            $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
-            $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
-            '<div class="text-center"></div></div></li>');
+            if (($db[i].division == $('#query-division').val()) || ($('#query-division').val() == '')) {
+                $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
+                $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
+                $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
+                $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
+                '<div class="text-center"></div></div></li>');
+                console.log($('#query-division').val());
+            }
         };
     });
     $('#sorting-hireday').click(function() {
         $('#loadarea').empty();
         $db.sort(compareHireday);
         for (var i in $db) {
-            $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
-            $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
-            $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
-            $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
-            '<div class="text-center"></div></div></li>');
+            if (($db[i].division == $('#query-division').val()) || ($('#query-division').val() == '')) {
+                $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
+                $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
+                $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
+                $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
+                '<div class="text-center"></div></div></li>');
+            }
         };
     });
     $('#sorting-birthday').click(function() {
         $('#loadarea').empty();
         $db.sort(compareBirthday);
         for (var i in $db) {
-            $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
-            $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
-            $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
-            $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
-            '<div class="text-center"></div></div></li>');
+            if (($db[i].division == $('#query-division').val()) || ($('#query-division').val() == '')) {
+                $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
+                $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
+                $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
+                $db[i].division + '</div><div class="user-position">' + $db[i].position + '</div>' + 
+                '<div class="text-center"></div></div></li>');
+            }
         };
     });
     $('#sorting-clear').click(function() {
         $('#loadarea').empty();
+        $('#query-division').val('');
         $db.sort(compareNo);
         for (var i in $db) {
             $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
