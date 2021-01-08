@@ -1,9 +1,10 @@
 $(function() {
     $db = null;
+    // read json file while page loading
     $(document).ready(function() {
         $.getJSON("dist/js/include.json", function(data) {
-            $db = data;
-            for (var i in data) {
+            $db = data; // save the json data into a global variable, so that the json file won't be read repeatly
+            for (var i in data) { // print the data
                 $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
                 data[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
                 data[i].lastName + data[i].firstName + '</div><div class="user-division">' + 
@@ -12,11 +13,12 @@ $(function() {
             };
         });
     });
+    // 
     $('#query-division').change(function() {
         if ($('#query-division').val() != "") {
-            $('#loadarea').empty();
-            for (var i in $db) {
-                if ($db[i].division == $('#query-division').val()) {
+            $('#loadarea').empty(); // clear the previous output
+            for (var i in $db) { 
+                if ($db[i].division == $('#query-division').val()) { // print the data which has the same division
                     $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
                     $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
                     $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
@@ -26,7 +28,7 @@ $(function() {
             };
         } else {
             $('#loadarea').empty();
-            for (var i in $db) {
+            for (var i in $db) { // when query-division is setted to empty, print all the data
                 $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
                 $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
                 $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
@@ -35,6 +37,7 @@ $(function() {
             };
         };
     });
+    // helper functions to sort the data
     function compareName(obj1, obj2) {
         if ((obj1.lastKana + obj1.firstKana) < (obj2.lastKana + obj2.firstKana)) {
             return -1
@@ -67,9 +70,9 @@ $(function() {
     };
     $('#sorting-name').click(function() {
         $('#loadarea').empty();
-        $db.sort(compareName);
+        $db.sort(compareName); // use helper function to sort the data
         for (var i in $db) {
-            if (($db[i].division == $('#query-division').val()) || ($('#query-division').val() == '')) {
+            if (($db[i].division == $('#query-division').val()) || ($('#query-division').val() == '')) { // print data when query-division is empty or in same division
                 $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
                 $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
                 $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 
@@ -107,9 +110,9 @@ $(function() {
     });
     $('#sorting-clear').click(function() {
         $('#loadarea').empty();
-        $('#query-division').val('');
-        $db.sort(compareNo);
-        for (var i in $db) {
+        $('#query-division').val(''); // reset the output and setting
+        $db.sort(compareNo); // sort the data in order of data No.
+        for (var i in $db) { // print data
             $('#loadarea').append('<li class="user-box col-md-2 col-sm-4 col-xs-12 text-center"><div class="thumbnail"><div class="thumbnail-image"><img class="img-circle" src="' + 
             $db[i].imagePath + '"></div><div class="user-indicator"></div><div class="user-name">' + 
             $db[i].lastName + $db[i].firstName + '</div><div class="user-division">' + 

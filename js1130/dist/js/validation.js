@@ -59,17 +59,17 @@ $(function() {
     });
     var err_text = '';
     var chk_req = 1;
-    $('input').focusout(function() {
+    $('input').focusout(function() { // check when every input box may be changed
         err_text = '';
         chk_req = 1;
         $('[class*="error"]').each(function(i, element) {
             err_text = err_text + $(element).text();
-        });
+        }); // collect all the error texts
         $('input[class*="required"]').each(function(i, element) {
             if ($(element).val() == '') {
                 chk_req = 0;
             };
-        });
+        }); // check all the required input
         if ((err_text == '') && (chk_req == 1)) {
             $('#add-user-form-submit').prop("disabled", false);
         } else {
